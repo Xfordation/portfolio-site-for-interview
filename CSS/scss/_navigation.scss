@@ -1,0 +1,100 @@
+.navbar {
+  top: 0;
+  position: fixed;
+  overflow: hidden;
+  // background-color: transparent;
+  z-index: 4;
+  width: 100%;
+  padding: 2rem 0;
+  font-family: "LexndDeca";
+  &Container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &Nav {
+    display: flex;
+    list-style-type: none;
+    gap: 1.5rem;
+    font-size: 20px;
+  }
+  &Link {
+    text-decoration: none;
+    color: $lightColor;
+    &:hover {
+      text-decoration: underline;
+      transition: ease-in 0.5s;
+    }
+  }
+  &LinkActive {
+    text-decoration: none;
+    color: #2c2c2c;
+  }
+  &Toggle {
+    cursor: pointer;
+    display: none;
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem;
+  }
+  &Button {
+    color: #ffffff;
+    background-color: $primaryColor;
+    text-decoration: none;
+    border: 1px solid $primaryColor;
+    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    a {
+      color: #ffffff;
+    }
+    &:hover {
+      background-color: transparent;
+      color: $primaryColor;
+      transition: ease 0.5s;
+    }
+  }
+}
+
+// Media Query
+@media (max-width: 992px) {
+  .navbar {
+    &ImageDiv {
+      width: 50%;
+    }
+    &Container {
+      flex-wrap: wrap;
+    }
+    &Toggle {
+      width: 50%;
+      display: block;
+      font-size: 24px;
+      text-align: right;
+      z-index: 5;
+    }
+    &Nav {
+      padding: 5rem 1rem;
+      display: none;
+      right: 0;
+      position: fixed;
+      height: 100vh;
+      width: 60%;
+      top: 0;
+      font-size: 18px;
+      flex-direction: column;
+      margin-bottom: 0.5rem;
+      background-color: #ffffff;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    padding: 1.5rem 0;
+    height: max-content;
+
+    &Button {
+      margin-top: 2rem;
+      padding: 0.9rem;
+    }
+  }
+}

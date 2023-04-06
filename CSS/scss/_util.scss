@@ -1,0 +1,198 @@
+@import "var";
+.container {
+  max-width: 1200px;
+  padding: 0 5rem;
+  margin: auto;
+}
+
+.text {
+  &Decoration {
+    text-decoration: none;
+  }
+  &Lh-18 {
+    line-height: 18px;
+  }
+  &ColorLight {
+    color: $lightColor;
+  }
+  &Bold {
+    font-weight: bold;
+  }
+  &Center {
+    text-align: center;
+  }
+}
+
+.d {
+  &Flex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+  }
+}
+
+.heading {
+  &Sub {
+    color: $primaryColor;
+  }
+  &Main {
+    color: $textColor;
+  }
+}
+
+.font {
+  &SmallExtra {
+    font-size: 16px;
+  }
+  &Normal {
+    font-size: 18px;
+  }
+  &Regular {
+    font-size: 20px;
+  }
+  &Large {
+    font-size: 24px;
+  }
+  &XL {
+    font-size: 30px;
+  }
+  &XXL {
+    font-size: 44px;
+  }
+  &NotoSans-Bold {
+    font-family: "NotoSans-Bold";
+  }
+}
+
+.margin {
+  &Y-1 {
+    margin: 1rem 0;
+  }
+  &Top-1 {
+    margin-top: 1rem;
+  }
+  &Top-2 {
+    margin-top: 2rem;
+  }
+  &X-1 {
+    margin: 0 1rem;
+  }
+}
+
+.padding {
+  &Y-3 {
+    padding: 3rem 0;
+  }
+  &Y-5 {
+    padding: 5rem 0;
+  }
+}
+
+.underline {
+  text-decoration: underline orange;
+}
+
+.Mobile {
+  display: none;
+}
+
+.btn {
+  padding: 1rem 1.5rem;
+  font-size: 20px;
+  font-weight: 600;
+  -webkit-appearance: none;
+  cursor: pointer;
+  &Primary {
+    background-color: $primaryColor;
+    border: 1px solid $primaryColor;
+    color: #ffffff;
+    &:hover {
+      background-color: transparent;
+      color: $primaryColor;
+      transition: ease 0.5s;
+    }
+  }
+  &Secondary {
+    background-color: transparent;
+    border: 1px solid $primaryColor;
+    color: $primaryColor;
+    &:hover {
+      background-color: $primaryColor;
+      color: #ffffff;
+      transition: ease 0.5s;
+    }
+  }
+  &Link {
+    cursor: pointer;
+    background-color: transparent;
+    color: orange;
+    border: none;
+  }
+  &Warning {
+    background-color: #ffa500;
+    color: #fff;
+    border: 1px solid #ffa500;
+    &:hover {
+      background-color: transparent;
+      color: #fff;
+      border: 1px solid #fff;
+      transition: ease 0.5s;
+    }
+  }
+}
+
+// Media Query
+@media (max-width: 1024px) {
+  .container {
+    max-width: 900px;
+    padding: 0 2rem;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 960px;
+    padding: 0 1rem;
+  }
+  .font {
+    &XXL {
+      font-size: 35px;
+    }
+  }
+  .padding {
+    &Y-5 {
+      padding: 2.5rem 0;
+    }
+  }
+  .d {
+    &Flex {
+      &Rev {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+  .Desktop {
+    display: none;
+  }
+  .Mobile {
+    display: block;
+  }
+  .btn {
+    padding: 0.9rem;
+    font-size: 18px;
+  }
+  .d {
+    &Flex {
+      flex-direction: column;
+      &Rev {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}

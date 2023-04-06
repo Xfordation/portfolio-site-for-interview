@@ -1,0 +1,66 @@
+.footer {
+  background-color: #fff;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: baseline;
+  justify-items: center;
+  padding: 2.5rem 0;
+  h5 {
+    font-family: "LexndDeca";
+    font-size: 20px;
+    color: $textColor;
+  }
+  &List {
+    color: $lightColor;
+    list-style-type: none;
+  }
+  small {
+    grid-column: 1 / span 4;
+    padding-top: 1rem;
+    text-align: center;
+    color: $textColor;
+    font-size: 16px;
+    font-family: "LexndDeca";
+  }
+  form {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+  }
+  &FormInput {
+    padding: 1rem 0.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #dddddd3c;
+  }
+  &FormButton {
+    padding: 0.8rem 0.5rem;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(255, 174, 0);
+    color: #fff;
+    font-size: 18px;
+    -webkit-appearance: none;
+  }
+  &Social {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+// Media Query
+@media (max-width: 992px) {
+  .footer {
+    grid-template-columns: 1fr;
+    justify-items: left;
+    padding: 1rem;
+    gap: 1rem;
+    small {
+      grid-column: 1;
+      justify-self: center;
+    }
+  }
+}

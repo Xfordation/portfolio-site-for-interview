@@ -1,0 +1,40 @@
+.searchBox {
+  display: flex;
+  padding: 0.5rem;
+  align-items: center;
+  margin-left: auto;
+  width: max-content;
+  border: 1px solid $primaryColor;
+  &Text {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0.5rem;
+    font-size: 20px;
+    margin-left: 0.5rem;
+    font-weight: 500;
+    color: $primaryColor;
+    &::placeholder {
+      color: $primaryColor;
+    }
+  }
+  &Button {
+    overflow: hidden;
+    font-size: 24px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: $primaryColor;
+  }
+}
+
+@media (max-width: 992px) {
+  .searchBox {
+    margin: auto;
+    &Text {
+      font-size: 18px;
+    }
+    &Button {
+      font-size: 20px;
+    }
+  }
+}
